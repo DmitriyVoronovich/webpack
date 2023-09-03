@@ -1,0 +1,62 @@
+.heard_panel_background {
+  width: 1200px;
+  height: 396px;
+  margin: 0 auto;
+  background: url('./Bitmap.png');
+}
+
+.heard_panel {
+  width: 1200px;
+  height: 396px;
+  display: grid;
+  grid-template-areas: 'a b' 'c c' 'd d';
+  justify-content: space-between;
+  align-content: start;
+}
+
+.heard_panel_log {
+  grid-area: a;
+  margin-top: 20px;
+  margin-left: 60px;
+}
+
+.logo_name {
+  height: 24px;
+}
+
+.heard_panel a {
+  grid-area: b;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-right: 56px;
+}
+
+.add_button {
+  margin-left: auto;
+  grid-area: b;
+  margin-top: 20px;
+  margin-right: 56px;
+}
+
+.head_panel_text {
+  grid-area: c;
+  width: 393px;
+  height: 49px;
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 35px;
+  margin-left: 120px;
+}
+
+.search_panel {
+  grid-area: d;
+  margin-top: 38px;
+  margin-left: 120px;
+}

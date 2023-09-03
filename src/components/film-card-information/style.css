@@ -1,0 +1,136 @@
+.card_module {
+  position: relative;
+  background: #232323;
+  transition: 0.5s;
+  width: 1200px;
+  height: 606px;
+  margin: 0 auto;
+}
+
+.active {
+  opacity: 1;
+  pointer-events: all;
+  z-index: 11;
+  overflow: hidden;
+}
+
+.card_button {
+  position: absolute;
+  left: 1100px;
+  width: 28px;
+  height: 29px;
+  background: url('./img/SearchButton.png');
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+}
+
+.card_container {
+  margin: 30px 0 0 60px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card_img {
+  width: 323.411px;
+  height: 486px;
+}
+
+.card_info_container {
+  margin-left: 60px;
+  display: grid;
+  grid-template-areas: 'a a' 'e e' 'c c' 'f f';
+  justify-content: start;
+}
+
+.card_film {
+  grid-area: c;
+  display: flex;
+}
+
+.first {
+  grid-area: a;
+}
+
+.card_film_name {
+  margin-top: 10px;
+  display: inline;
+  height: 49px;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.card_film_rating {
+  padding-top: 17px;
+  text-align: center;
+  height: 43px;
+  width: 60px;
+  border-radius: 50%;
+  border: 2px solid;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-left: 25px;
+}
+
+.card_film_genres {
+  height: 17px;
+  grid-area: e;
+  margin-top: 9px;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.card_film_year {
+  width: 54px;
+  height: 29px;
+  grid-area: c;
+  margin-top: 30px;
+  color: #f65261;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.card_film_time {
+  height: 29px;
+  grid-area: d;
+  margin: 30px 0 0 51px;
+  color: #f65261;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.card_film_text {
+  height: 292px;
+  grid-area: f;
+  width: 698px;
+  margin-top: 29px;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  opacity: 0.5;
+}

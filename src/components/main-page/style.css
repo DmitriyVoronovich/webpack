@@ -1,0 +1,22 @@
+.main {
+  width: 1200px;
+  margin: 10px auto 0;
+  background: #232323;
+  position: relative;
+}
+
+.genres_line {
+  position: absolute;
+  top: 60px;
+  margin: 0 0 0 57px;
+  padding: 0;
+  width: 1084px;
+  height: 2px;
+  flex-shrink: 0;
+  background: #424242;
+}
+
+.number_of_films {
+  margin-left: 59px;
+  margin-top: 24px;
+}

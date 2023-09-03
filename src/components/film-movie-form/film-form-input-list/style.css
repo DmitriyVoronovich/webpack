@@ -1,0 +1,111 @@
+.film_form_input_list {
+  width: 859px;
+  margin: 38px auto 0;
+  display: grid;
+  grid-template-areas: 'a b' 'c d' 'e f' 'h h';
+  gap: 30px;
+}
+
+.input_name {
+  color: #f65261;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.889px;
+  text-transform: uppercase;
+  opacity: 0.800000011920929;
+}
+
+.input_style {
+  height: 57px;
+  border-radius: 4px;
+  opacity: 0.8030970692634583;
+  background: rgba(50, 50, 50, 0.95);
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 13px;
+}
+
+.name {
+  width: 507px;
+  flex-shrink: 0;
+  grid-area: a;
+}
+
+.name::placeholder {
+  padding: 17px 0 16px 18px;
+}
+
+.img {
+  width: 506px;
+  flex-shrink: 0;
+  grid-area: c;
+}
+
+.img::placeholder {
+  padding: 18px 0 15px 18px;
+}
+
+.genres {
+  width: 507px;
+  grid-area: e;
+}
+.genres::placeholder {
+  padding: 18px 0 15px 18px;
+}
+
+.year {
+  width: 282px;
+  grid-area: b;
+}
+
+.year::placeholder {
+  padding: 17px 0 16px 19px;
+}
+
+.rating {
+  width: 283px;
+  grid-area: d;
+}
+
+.rating::placeholder {
+  padding: 16px 0 17px 18px;
+}
+
+.time {
+  width: 283px;
+  grid-area: f;
+}
+
+.time::placeholder {
+  padding: 16px 0 17px 18px;
+}
+.description {
+  width: 841px;
+  height: 197px;
+  grid-area: h;
+}
+
+.description::placeholder {
+  padding: 18px 0 0 18px;
+}
+
+option {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.8008;
+}
+
+.error {
+  color: #f65261;
+}

@@ -1,0 +1,33 @@
+.search_panel {
+  height: 57px;
+}
+.search_panel_input {
+  width: 694px;
+  height: 57px;
+  border-radius: 4px;
+  opacity: 0.699999988079071;
+  background: rgba(50, 50, 50, 0.8);
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 19px;
+}
+
+.search_panel_button {
+  width: 233px;
+  height: 57px;
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background: #f65261;
+  margin-left: 14px;
+}

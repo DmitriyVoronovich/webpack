@@ -1,0 +1,13 @@
+.footer {
+  width: 1200px;
+  height: 70px;
+  margin: 0 auto;
+  flex-shrink: 0;
+  background: #424242;
+  opacity: 1;
+}
+
+.footer_log {
+  padding-top: 23px;
+  margin-left: 548px;
+}

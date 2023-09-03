@@ -1,0 +1,35 @@
+.sort_panel {
+  display: flex;
+  height: 62px;
+}
+
+.sort_by {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.889px;
+  text-transform: uppercase;
+  opacity: 0.6027018427848816;
+}
+
+.sort_data {
+  margin-left: 35px;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.889px;
+  text-transform: uppercase;
+}
+
+.sort_img {
+  width: 12px;
+  height: 7px;
+  margin-left: 13px;
+  margin-top: 5px;
+}

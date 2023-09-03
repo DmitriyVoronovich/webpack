@@ -1,0 +1,15 @@
+.add_module {
+  width: 1200px;
+  min-height: 100%;
+  background: rgba(35, 35, 35, 0.92);
+  backdrop-filter: blur(12.232268333435059px);
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0);
+}
+
+.logo_container {
+  padding: 20px 0 0 60px;
+}

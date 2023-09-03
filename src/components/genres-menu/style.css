@@ -1,0 +1,32 @@
+.genres_menu {
+  height: 62px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.genres_list {
+  width: 488px;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-top: 20px;
+  padding-left: 59px;
+  margin-bottom: 0;
+}
+
+.genres_item {
+  z-index: 2;
+  border-bottom: #f65261 solid 4px;
+}
+
+.sort_panel {
+  margin-top: 20px;
+  margin-right: 62px;
+}
