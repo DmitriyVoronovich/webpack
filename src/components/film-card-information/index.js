@@ -1,19 +1,17 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Logo } from 'components';
-import { dispatcherTypes } from 'consts';
-import { AppContext } from 'context';
 import './style.css';
 
-const { CLOSE_INFO } = dispatcherTypes;
+import {modalInfoClose} from 'context'
+import { useDispatch, useSelector } from "react-redux";
 
 const FilmCardInformation = () => {
-  const { state, dispatch } = useContext(AppContext);
-
-  const closeInfo = () => dispatch({ type: CLOSE_INFO });
+  const dispatch = useDispatch();
+  const closeInfo = () => dispatch(modalInfoClose());
 
   const {
     film: { img, name, year, genres, rating, time, description }
-  } = state;
+  } = useSelector(state => state);
 
   return (
     <div className='card_module'>

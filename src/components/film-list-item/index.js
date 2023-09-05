@@ -1,33 +1,20 @@
-import { useContext } from 'react';
 import { Button } from 'components';
-import { buttonContent, dispatcherTypes } from 'consts';
-import { AppContext } from 'context';
+import { buttonContent } from 'consts';
 import close from '../film-movie-form/movie-form/img/CloseButton.png';
 import './style.css';
 
-const { DELETE, EDIT, INFO } = dispatcherTypes;
+import { filmDelete, filmEdit, modalInfo } from 'context'
+import { useDispatch } from "react-redux";
 
 const FilmListItem = film => {
-  const { dispatch } = useContext(AppContext);
+  const dispatch = useDispatch();
   const { id, img, name, year, genres } = film;
 
-  const onDelete = () =>
-    dispatch({
-      type: DELETE,
-      payload: id
-    });
+  const onDelete = () => dispatch(filmDelete(id));
 
-  const handleInfo = () =>
-    dispatch({
-      type: INFO,
-      payload: film
-    });
+  const handleInfo = () => dispatch(modalInfo(film));
 
-  const handleEdit = () =>
-    dispatch({
-      type: EDIT,
-      payload: film
-    });
+  const handleEdit = () => dispatch(filmEdit(film));
 
   return (
     <div className='film_item_container' onClick={handleInfo}>

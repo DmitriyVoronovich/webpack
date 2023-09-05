@@ -1,22 +1,20 @@
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Button, Logo, SearchPanel } from 'components';
-import { buttonContent, dispatcherTypes } from 'consts';
-import { AppContext } from 'context/context';
+import { buttonContent } from 'consts';
 import './style.css';
 
-const { FORM } = dispatcherTypes;
+import { modalForm } from 'context'
+import { useDispatch } from "react-redux";
+
 
 const HeaderPanel = () => {
-  const { dispatch } = useContext(AppContext);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     document.body.style.overflow = `visible`;
   }, []);
 
-  const onAddFilm = () =>
-    dispatch({
-      type: FORM
-    });
+  const onAddFilm = () => dispatch(modalForm());
 
   return (
     <div className='heard_panel_background'>

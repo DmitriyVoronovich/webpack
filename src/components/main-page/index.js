@@ -1,11 +1,10 @@
-import { useContext } from 'react';
 import { FilmList, Footer, GenresMenu, NumberOfFilms } from 'components';
-import { AppContext } from 'context';
 import './style.css';
+import { useSelector } from "react-redux";
 
 const MainPage = () => {
-  const { state } = useContext(AppContext);
-  const { films } = state;
+
+  const { films } = useSelector(state => state)
 
   const filmCounter = films.length;
 

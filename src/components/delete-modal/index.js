@@ -1,19 +1,19 @@
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Button, Footer, Logo } from 'components';
-import { buttonContent, dispatcherTypes } from 'consts';
-import { AppContext } from 'context';
+import { buttonContent } from 'consts';
 import './style.css';
 
-const { CLOSE_DELETE_MODAL } = dispatcherTypes;
+import { modalDeleteClose } from "context"
+import { useDispatch } from "react-redux";
 
 const DeleteModal = () => {
-  const { dispatch } = useContext(AppContext);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     document.body.style.overflow = `hidden`;
   });
 
-  const handleDelete = () => dispatch({ type: CLOSE_DELETE_MODAL });
+  const handleDelete = () => dispatch(modalDeleteClose());
 
   return (
     <div className='delete_modal_container'>

@@ -1,11 +1,10 @@
-import { useContext } from 'react';
 import { FilmListItem } from 'components';
-import { AppContext } from 'context';
 import './style.css';
+import { useSelector } from "react-redux";
 
 const FilmList = () => {
-  const { state } = useContext(AppContext);
-  const { films } = state;
+
+  const { films } = useSelector(state => state);
 
   const elements = films.map(film => {
     return <FilmListItem key={film.id} {...film} />;

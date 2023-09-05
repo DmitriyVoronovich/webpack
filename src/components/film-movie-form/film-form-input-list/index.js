@@ -5,11 +5,11 @@ import SelectInput from './selectInput';
 import './style.css';
 import TextInput from './textInput';
 
-const FilmFormInputList = ({ film, setFilm }) => {
+const FilmFormInputList = ({ newFilm, setNewFilm }) => {
   const handleInputChange = (e, fieldName) => {
-    const changedFilm = { ...film };
+    const changedFilm = { ...newFilm };
     changedFilm[fieldName] = e.target.value;
-    setFilm(changedFilm);
+    setNewFilm(changedFilm);
   };
 
   const firstPart = inputInfo.slice(0, 2).map(ip => {
@@ -18,7 +18,7 @@ const FilmFormInputList = ({ film, setFilm }) => {
     return (
       <TextInput
         key={id}
-        value={film[itemProps.name]}
+        value={newFilm[itemProps.name]}
         {...itemProps}
         handleInputChange={handleInputChange}
       />
@@ -32,7 +32,7 @@ const FilmFormInputList = ({ film, setFilm }) => {
       <TextInput
         key={id}
         {...itemProps}
-        value={film[itemProps.name]}
+        value={newFilm[itemProps.name]}
         handleInputChange={handleInputChange}
       />
     );
@@ -72,7 +72,7 @@ const FilmFormInputList = ({ film, setFilm }) => {
         {firstPart}
         <SelectInput
           handleInputChange={handleInputChange}
-          filmGenres={film.genres}
+          filmGenres={newFilm.genres}
         />
         {secondPart}
       </Form>
