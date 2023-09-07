@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 import { Button, Logo, SearchPanel } from 'components';
 import { buttonContent } from 'consts';
 import './style.css';
@@ -10,9 +10,12 @@ import { useDispatch } from "react-redux";
 const HeaderPanel = () => {
   const dispatch = useDispatch();
 
+
   useEffect(() => {
     document.body.style.overflow = `visible`;
   }, []);
+
+
 
   const onAddFilm = () => dispatch(modalForm());
 

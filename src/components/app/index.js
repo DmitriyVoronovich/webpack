@@ -3,6 +3,7 @@ import "./style.css";
 import { useSelector } from "react-redux";
 
 const App = () => {
+
   const {
     isMovieAdded,
     isFilmFormOpen,

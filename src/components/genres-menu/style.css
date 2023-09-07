@@ -21,9 +21,13 @@
   margin-bottom: 0;
 }
 
-.genres_item {
-  z-index: 2;
+.genres_item{
+  cursor: pointer;
+}
+
+.active {z-index: 2;
   border-bottom: #f65261 solid 4px;
+  cursor: pointer;
 }
 
 .sort_panel {

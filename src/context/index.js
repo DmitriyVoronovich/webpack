@@ -1,22 +1,32 @@
-import { defaultFilm, filmList } from "consts";
+import { defaultFilm } from "consts";
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from "uuid";
 
 
 const initialState = {
+  filmsLoadingStatus: 'idle',
   isFilmFormOpen: false,
   isMovieAdded: false,
   isMovieDeleted: false,
   filmInfo: false,
   film: defaultFilm,
   title: "",
-  films: filmList
+  films: [],
+
 };
 
 const index = createSlice({
   name: "context",
   initialState,
   reducers: {
+    filmsFetching: state => {state.filmsLoadingStatus = 'loading'},
+    filmsFetched: (state, action) => {
+      state.filmsLoadingStatus = 'idle';
+      state.films = action.payload;
+    },
+    filmsFetchingError: state => {
+      state.filmsLoadingStatus = 'error';
+    },
     modalSuccessClose: state => {
       document.body.style.overflow = `visible`;
       state.isMovieAdded = false;
@@ -28,6 +38,7 @@ const index = createSlice({
     },
     movieFormClose: state => {
       state.isFilmFormOpen = false;
+      state.film = defaultFilm;
     },
     modalInfoClose: state => {
       state.filmInfo = false;
@@ -65,6 +76,9 @@ const { actions, reducer } = index;
 
 export default reducer;
 export const {
+  filmsFetching,
+  filmsFetchingError,
+  filmsFetched,
   filmSubmit,
   filmDelete,
   filmEdit,

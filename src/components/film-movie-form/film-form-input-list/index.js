@@ -39,31 +39,31 @@ const FilmFormInputList = ({ newFilm, setNewFilm }) => {
   });
 
   const SignupSchema = Yup.object().shape({
-    name: Yup.string()
+    title: Yup.string()
       .min(2, 'Too Short!')
       .max(50, 'Too Long!')
       .required('Required'),
-    rating: Yup.number()
+    vote_average: Yup.number()
       .min(0, 'Less then min value!')
       .max(10, 'More then max value!')
       .required('Required'),
-    img: Yup.string().required('Required'),
-    time: Yup.number().min(0, 'Too low!').required('Required'),
-    year: Yup.string().required('Required'),
+    poster_path: Yup.string().required('Required'),
+    runtime: Yup.number().min(0, 'Too low!').required('Required'),
+    release_date: Yup.string().required('Required'),
     genres: Yup.array().min(1, 'Less then min value!').required('Required'),
-    description: Yup.string().required('Required')
+    overview: Yup.string().required('Required')
   });
 
   return (
     <Formik
       initialValues={{
-        name: '',
-        img: '',
+        title: '',
+        poster_path: '',
         genres: '',
-        year: '',
-        rating: 0,
-        time: 0,
-        description: ''
+        release_date: '',
+        vote_average: 0,
+        runtime: 0,
+        overview: ''
       }}
       validationSchema={SignupSchema}
       onSubmit={values => console.log(JSON.stringify(values, null, 2))}

@@ -1,17 +1,28 @@
-import { SortPanel } from 'components';
-import './style.css';
+import { SortPanel } from "components";
+import "./style.css";
+import GenresMenuItem from "../genres-menu-item";
+import { menuGenres } from "consts";
 
-const GenresMenu = () => (
-  <div className='genres_menu'>
-    <ul className='genres_list'>
-      <li className='genres_item'>ALL</li>
-      <li>DOCUMENTARY</li>
-      <li>COMEDY</li>
-      <li>HORROR</li>
-      <li>CRIME</li>
-    </ul>
-    <SortPanel />
-  </div>
-);
+const GenresMenu = () => {
+
+  const genres = menuGenres;
+
+  const elements = (arr) => {
+    return arr.map((genres) => {
+      return <GenresMenuItem key={genres.name} {...genres} />;
+    });
+  };
+
+
+
+  return (
+    <div className="genres_menu">
+      <ul className="genres_list">
+        {elements(genres)}
+      </ul>
+      <SortPanel />
+    </div>
+  );
+};
 
 export default GenresMenu;
