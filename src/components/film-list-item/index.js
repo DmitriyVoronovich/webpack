@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 
 const FilmListItem = film => {
   const dispatch = useDispatch();
-  const { id, img, name, year, genres } = film;
+  const { id, poster_path, title, release_date, genres } = film;
 
   const onDelete = () => dispatch(filmDelete(id));
 
@@ -29,10 +29,10 @@ const FilmListItem = film => {
           <Button {...buttonContent.deleteButtonItem} onClick={onDelete} />
         </div>
       </div>
-      <img className='film_item_img' src={img} alt='movie cover' />
+      <img className='film_item_img' src={poster_path} alt='movie cover' />
       <div className='film_item_info'>
-        <div className='film_item_name'>{name}</div>
-        <div className='film_item_year'>{year}</div>
+        <div className='film_item_name'>{title}</div>
+        <div className='film_item_year'>{release_date}</div>
       </div>
       <div className='film_item_genres'>{genres}</div>
     </div>

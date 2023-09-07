@@ -17,8 +17,10 @@ import MainPage from './main-page';
 import NumberOfFilms from './number-of-films';
 import SearchPanel from './search-panel';
 import SortPanel from './sort-panel';
+import GenresMenuItem from './genres-menu-item'
 
 export {
+  GenresMenuItem,
   FilmFormInputList,
   FilmCardInformation,
   ErrorBoundary,
